@@ -361,12 +361,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-
-
-
-# Menu XML Files
-Maintenance/MenuAccess/
-
-# Customer Upload Files
-FileUpload/
-

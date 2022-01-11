@@ -19008,7 +19008,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2247</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/SME</IISUrl>
+          <IISUrl>http://localhost/SME5</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
