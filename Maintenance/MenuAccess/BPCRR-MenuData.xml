@@ -1,7 +1,13 @@
 <MenuData ImagesBaseURL="Maintenance/MenuAccess/images/" DefaultGroupCssClass="MenuGroup" DefaultItemCssClass="MenuItem" DefaultItemCssClassOver="MenuItemOver" DefaultItemCssClassDown="MenuItemDown">
   <MenuGroup>
+    <MenuItem Label="Loan Process" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
+      <MenuGroup>
+        <MenuItem Label="Credit Proposals" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CreditProposal/ListCreditProposal.aspx?tc=BP8.0&amp;mc=BP080" />
+      </MenuGroup>
+    </MenuItem>
     <MenuItem Label="Approval" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
       <MenuGroup>
+        <MenuItem Label="Approval" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Approval/ListApproval.aspx?tc=BP9.2&amp;mc=BP090" />
         <MenuItem Label="Review Approval" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Approval/ListApproval.aspx?tc=BP9.00&amp;mc=BP1000" />
       </MenuGroup>
     </MenuItem>

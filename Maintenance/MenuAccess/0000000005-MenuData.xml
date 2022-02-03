@@ -12,11 +12,11 @@
         <MenuItem Label="Legal Monitoring &amp; Booking Entry" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CreditOperations/LegalProcessMonitoring/LegalProcessMonitoringList.aspx?tc=BP14.0&amp;mc=BP140" />
         <MenuItem Label="Booking" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CreditOperations/Booking/BookingList.aspx?tc=BP15.0&amp;mc=BP150" />
         <MenuItem Label="Disbursement Checklist" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Legal/ListDisbursement.aspx?tc=BP15.5&amp;mc=BP155" />
-        <MenuItem Label="BI Checking" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
+        <MenuItem Label="SLIK Checking" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
           <MenuGroup>
-            <MenuItem Label="BI Checking Assignment" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Assignment/AssignmentList.aspx?mc=BP211010" />
-            <MenuItem Label="Request For BI Checking" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CreditOperations/BIChecking/BICheckingRequestList.aspx?mc=BP211020" />
-            <MenuItem Label="BI Checking Result Entry" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CreditOperations/BIChecking/BICheckingResultList.aspx?mc=BP211030" />
+            <MenuItem Label="SLIK Checking Assignment" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Assignment/AssignmentList.aspx?mc=BP211010" />
+            <MenuItem Label="Request For SLIK Checking" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CreditOperations/BIChecking/BICheckingRequestList.aspx?mc=BP211020" />
+            <MenuItem Label="SLIK Checking Result Entry" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CreditOperations/BIChecking/BICheckingResultList.aspx?mc=BP211030" />
           </MenuGroup>
         </MenuItem>
       </MenuGroup>
@@ -25,11 +25,6 @@
       <MenuGroup>
         <MenuItem Label="Appraisal Assignment &amp; Validation" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CreditOperations/ListAssignment.aspx?tc=&amp;mc=BP201" />
         <MenuItem Label="Appraisal Entry" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Appraisal/ListAppraisal.aspx?tc=&amp;mc=BP202" />
-      </MenuGroup>
-    </MenuItem>
-    <MenuItem Label="MIS Report" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
-      <MenuGroup>
-        <MenuItem Label="DASHBOARD" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="SourceSMEReport/Redirect.aspx?mc=BP9901" />
       </MenuGroup>
     </MenuItem>
     <MenuItem Label="Facilities" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
@@ -43,6 +38,13 @@
         <MenuItem Label="Change Password" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/ChangePassword.aspx?mc=BP9020" />
         <MenuItem Label="Historical Loan Info" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="HistoricalLoanInfo/SearchCustomer.aspx?mc=BP9060" />
         <MenuItem Label="Send/Receive Messages" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/Messages.aspx?mc=BP9070" />
+        <MenuItem Label="Document Tracking" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
+          <MenuGroup>
+            <MenuItem Label="Send / Receive" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/DocumentTrackingSearch.aspx?mc=BP908010" />
+            <MenuItem Label="Tracking History" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/InquiryDocumentTracking.aspx?mc=BP908020" />
+            <MenuItem Label="View Upload Files" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/ViewUploadedFiles.aspx?mc=BP908030" />
+          </MenuGroup>
+        </MenuItem>
       </MenuGroup>
     </MenuItem>
     <MenuItem Label="Logout" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Logout.aspx" URLTarget="_top" />

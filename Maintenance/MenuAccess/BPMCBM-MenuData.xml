@@ -3,6 +3,7 @@
     <MenuItem Label="Approval" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
       <MenuGroup>
         <MenuItem Label="Approval" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Approval/ListApproval.aspx?tc=BP9.2&amp;mc=BP090" />
+        <MenuItem Label="Approval Committee" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Approval/ListApprovalCommitee.aspx?tc=BP10.0&amp;mc=BP100" />
       </MenuGroup>
     </MenuItem>
     <MenuItem Label="LMS" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">

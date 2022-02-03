@@ -23,12 +23,6 @@
         <MenuItem Label="Inquiry Application by Status" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="LMS/InquiryStatus.aspx?mc=BP509010" />
       </MenuGroup>
     </MenuItem>
-    <MenuItem Label="Interface" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
-      <MenuGroup>
-        <MenuItem Label="Generate Textfile" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="GenerateTextFile/Generatefile.aspx?mc=BP8010" />
-        <MenuItem Label="Upload Textfile" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="GenerateTextFile/Uploadfile.aspx?mc=BP8020" />
-      </MenuGroup>
-    </MenuItem>
     <MenuItem Label="Facilities" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
       <MenuGroup>
         <MenuItem Label="Inquiry Application" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">

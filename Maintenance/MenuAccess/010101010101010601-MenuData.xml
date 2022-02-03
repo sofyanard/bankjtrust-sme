@@ -43,6 +43,7 @@
         <MenuItem Label="Product Rate Inquiry" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/RateInquiry.aspx?mc=079" />
         <MenuItem Label="Exchange Rate Inquiry" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/ExchangeRateInquiry.aspx?mc=080" />
         <MenuItem Label="Historical Loan Info" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="HistoricalLoanInfo/SearchCustomer.aspx?mc=081" />
+        <MenuItem Label="Inquiry Application in Approval Commitee" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Approval/ListApprovalCommitee.aspx?mc=098" />
         <MenuItem Label="Messages" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
           <MenuGroup>
             <MenuItem Label="Send/Receive Messages" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/Messages.aspx?mc=14110" />
@@ -50,6 +51,8 @@
         </MenuItem>
         <MenuItem Label="CBI, Verification &amp; Analysis" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="/SME/LOW/LOWSearchCustomer.aspx" />
         <MenuItem Label="Quantitative Analysis" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="/SME/LOW/LOWSearchAnalyst.aspx" />
+        <MenuItem Label="Inquiry Data Debitur Waspada" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/InquiryDebiturWaspada.aspx?mc=DW01" />
+        <MenuItem Label="Maintenance Data Debitur Waspada" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/MaintenanceDebiturWaspada.aspx?mc=DW02" />
         <MenuItem Label="PTO ILP" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
           <MenuGroup>
             <MenuItem Label="PTO ILP Corporate Banking" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="PTO/pto01corpbu.html" />
@@ -74,7 +77,7 @@
     </MenuItem>
     <MenuItem Label="CBI" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
       <MenuGroup>
-        <MenuItem Label="CBI Insert" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CBI/CBIInsert.aspx" />
+        <MenuItem Label="CBI Insert" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CBI/CBIInsert.aspx?mc=CBI01" />
       </MenuGroup>
     </MenuItem>
     <MenuItem Label="Targeted Customer" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">

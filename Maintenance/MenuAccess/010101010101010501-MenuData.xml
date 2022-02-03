@@ -32,7 +32,21 @@
         <MenuItem Label="Change Password" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/ChangePassword.aspx?mc=026" />
         <MenuItem Label="Reject/Cancel Application" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/RejectApplication.aspx?ap_regno=&amp;nama=&amp;cust=&amp;tgl=&amp;bln=&amp;thn=&amp;noID=&amp;area=&amp;cabang=&amp;tampil=&amp;ap_link=&amp;mc=028" />
         <MenuItem Label="Customer Information" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CustomerInfo/SearchCustomer.aspx?mc=030&amp;tc=9.9" />
+        <MenuItem Label="House Keeping" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/HouseKeeping.aspx?mc=032" />
         <MenuItem Label="Reject eMAS Maintenance" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CreditOperations/RejectMaintenance/RejectMaintenanceList.aspx?tc=5.4&amp;mc=033" />
+        <MenuItem Label="Product Rate Inquiry" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/RateInquiry.aspx?mc=079" />
+        <MenuItem Label="Exchange Rate Inquiry" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/ExchangeRateInquiry.aspx?mc=080" />
+        <MenuItem Label="Document Tracking" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
+          <MenuGroup>
+            <MenuItem Label="Send / Receive" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/DocumentTrackingSearch.aspx?mc=096" />
+            <MenuItem Label="Tracking History" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/InquiryDocumentTracking.aspx?mc=097" />
+          </MenuGroup>
+        </MenuItem>
+        <MenuItem Label="Messages" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
+          <MenuGroup>
+            <MenuItem Label="Send/Receive Messages" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Facilities/Messages.aspx?mc=14110" />
+          </MenuGroup>
+        </MenuItem>
         <MenuItem Label="Account Customer" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="CustomerInfo/SearchCustomerAC.aspx?mc=142&amp;tc=9.9" />
         <MenuItem Label="Pre Initial Entry (ILP)" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="InitialDataEntry/FindCustomer.aspx?tc=1.0&amp;mc=C21" />
         <MenuItem Label="PTO ILP" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
@@ -61,11 +75,30 @@
         <MenuItem Label="Portfolio Nota Watchlist" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="LMS/PorSearchCustomer.aspx?scr=3&amp;tc=3.0&amp;mc=129" />
         <MenuItem Label="Portfolio Loan Review Finish" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="LMS/PorSearchCustomer.aspx?scr=7&amp;tc=7.0&amp;mc=131" />
         <MenuItem Label="Portfolio Watchlist Finish" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="LMS/PorSearchCustomer.aspx?scr=7&amp;tc=7.1&amp;mc=132" />
+        <MenuItem Label="Review Covenant" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
+          <MenuGroup>
+            <MenuItem Label="Review Covenant Risk" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="LMS/RevwCovenantSearch.aspx?mc=13501" />
+            <MenuItem Label="Review Covenant CO" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="LMS/RevwCovenantSearch.aspx?mc=13502" />
+          </MenuGroup>
+        </MenuItem>
       </MenuGroup>
     </MenuItem>
     <MenuItem Label="ITTP" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
       <MenuGroup>
         <MenuItem Label="Transaction History" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="ITTP/SearchCustomerHistoryTransaction.aspx?mc=T10" />
+      </MenuGroup>
+    </MenuItem>
+    <MenuItem Label="Targeted Customer" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
+      <MenuGroup>
+        <MenuItem Label="Targeted Customer" RightIcon="arrow.gif" RightconWidth="17" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
+          <MenuGroup>
+            <MenuItem Label="Input Targeted Customer" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="TargetCustomer/TargetCustomerSearch.aspx?trg=1&amp;tc=G1.0&amp;mc=13810" />
+            <MenuItem Label="Acceptance Targeted Customer (BU)" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="TargetCustomer/TargetCustomerAprvList.aspx?trg=2&amp;tc=G2.0&amp;mc=13820" />
+            <MenuItem Label="Acceptance Targeted Customer (Risk)" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="TargetCustomer/TargetCustomerAprvList.aspx?trg=3&amp;tc=G3.0&amp;mc=13830" />
+            <MenuItem Label="Assignment Targeted Customer" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="TargetCustomer/TargetCustomerAssign.aspx?mc=13880" />
+            <MenuItem Label="Inquiry Targeted Customer" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="TargetCustomer/TargetCustomerInquiry.aspx?mc=13890" />
+          </MenuGroup>
+        </MenuItem>
       </MenuGroup>
     </MenuItem>
     <MenuItem Label="Credit Channeling for end User" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
@@ -87,6 +120,20 @@
         <MenuItem Label="Result Advise" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Legal/LegalAdviseAdministration/ResultAdvise/ResultList.aspx?tc=LGL.4&amp;mc=LGL04" />
         <MenuItem Label="Inquiry Historical Data" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Legal/LegalAdviseAdministration/InquiryHistoricalData/ResultList.aspx?tc=LGL.5&amp;mc=LGL05" />
         <MenuItem Label="Reporting" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Legal/LegalAdviseAdministration/Reporting/LegalAdminReporting.aspx?tc=LGL.6&amp;mc=LGL06" />
+      </MenuGroup>
+    </MenuItem>
+    <MenuItem Label="L M S" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12">
+      <MenuGroup>
+        <MenuItem Label="Upload Data Core" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="MAS/CollateralAdministration/UploadData/UploadData.aspx" />
+        <MenuItem Label="Upload Data LOS" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="MAS/CollateralAdministration/UploadData/UploadData.aspx" />
+        <MenuItem Label="Credit Documentation" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Syndication/CustomerList.aspx?mc=SDC02" />
+        <MenuItem Label="New Collateral Entry" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="MAS/CollateralAdministration/InputNewCollateral/ListCollateral.aspx" />
+        <MenuItem Label="Collateral Request" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="MAS/CollateralAdministration/InputNewCollateral/ListCollateral.aspx" />
+        <MenuItem Label="Send Collateral to Keep" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="MAS/CollateralAdministration/AcceptanceDataInput/ListAcceptance.aspx" />
+        <MenuItem Label="Pick Up &amp; Send Collateral" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="MAS/CollateralAdministration/PickUpSendCollateral/ListRequest.aspx" />
+        <MenuItem Label="Credit Calculation" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Syndication/CustomerList.aspx?mc=SDC04" />
+        <MenuItem Label="Credit Checking" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="MAS/CollateralAdministration/DetailCollateral/Collateral_Inv.aspx?link=profile&amp;mc=LMS09" />
+        <MenuItem Label="Reporting" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="MAS/CollateralAdministration/Reporting/CollateralAdministrationReport.aspx" />
       </MenuGroup>
     </MenuItem>
     <MenuItem Label="Logout" LeftIcon="bullet.gif" LeftIconOver="bullet_over.gif" LeftIconWidth="20" LeftIconHeight="12" URL="Logout.aspx" URLTarget="_top" />
