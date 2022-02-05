@@ -454,6 +454,10 @@ namespace SME.Scoring
 						conn.QueryString = "update application set ap_ca='" + Session["UserID"].ToString() + "' where ap_regno='" + e.Item.Cells[0].Text + "'";
 						conn.ExecuteNonQuery();
 					}
+
+					// string baseUrl = Request.Url.Scheme + "://" + Request.Url.Authority + Request.ApplicationPath.TrimEnd('/');
+					// string redirectUrl = baseUrl + e.Item.Cells[7].Text + "regno=" + e.Item.Cells[0].Text + "&curef=" + e.Item.Cells[1].Text + "&mc=" + mc + "&tc=" + tc;
+					// Response.Redirect(redirectUrl);
 					Response.Redirect(e.Item.Cells[7].Text+"regno="+e.Item.Cells[0].Text+"&curef="+e.Item.Cells[1].Text + "&mc=" + mc + "&tc=" + tc);
 
 					/*

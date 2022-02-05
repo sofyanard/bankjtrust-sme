@@ -36,7 +36,7 @@
 						<TD class="tdHeader1" colSpan="2">Personal Data</TD>
 					</TR>
 					<TR>
-						<TD vAlign="top" colSpan="2"><iframe id="if1" style="WIDTH: 100%; HEIGHT: 190px" name="if1" src="/SME/SPPK/appinfo.aspx?regno=<%=Request.QueryString["regno"]%>&curef=<%=Request.QueryString["curef"]%>&amp;sta=view" scrolling="no"></iframe>
+						<TD vAlign="top" colSpan="2"><iframe id="if1" style="WIDTH: 100%; HEIGHT: 190px" name="if1" src="../SPPK/appinfo.aspx?regno=<%=Request.QueryString["regno"]%>&curef=<%=Request.QueryString["curef"]%>&amp;sta=view" scrolling="no"></iframe>
 						</TD>
 					</TR>
 					<TR>
