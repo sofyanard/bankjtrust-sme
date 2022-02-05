@@ -10,6 +10,11 @@
 		<LINK href="../Style.css" type="text/css" rel="stylesheet">
 		<!-- #include file="../include/cek_all.html" -->
 		<!-- #include file="../include/cek_entries.html" -->
+		<link type="text/css" rel="stylesheet" href="../include/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="../include/bootstrap-select.min.css" />
+		<script type="text/javascript" src="../include/jquery.min.js"></script>
+		<script type="text/javascript" src="../include/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../include/bootstrap-select.min.js"></script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="Form1" method="post" runat="server">
@@ -19,8 +24,7 @@
 						<TD align="left" colSpan="1">
 							<TABLE id="Table3">
 								<TR>
-									<TD class="tdBGColor2" style="WIDTH: 400px; font-weight: 700;" align="center">Daftar 
-                                        Nasabah</TD>
+									<TD class="tdBGColor2" style="WIDTH: 400px; font-weight: 700;" align="center">Customer List</TD>
 								</TR>
 							</TABLE>
 						</TD>
@@ -31,7 +35,7 @@
 							<TABLE class="td" id="Table1" style="WIDTH: 590px; HEIGHT: 200px" cellSpacing="1" cellPadding="1"
 								width="590" border="1">
 								<TR>
-									<TD class="tdHeader1">Kriteria Pencarian</TD>
+									<TD class="tdHeader1">Search Criteria</TD>
 								</TR>
 								<TR>
 									<TD vAlign="bottom" align="center">
@@ -42,22 +46,22 @@
 												<TD class="TDBGColorValue" style="WIDTH: 342px" width="342"><asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_CIF" runat="server" MaxLength="20"></asp:textbox></TD>
 											</TR>
 											<TR>
-												<TD class="TDBGColor1">Nama Pemohon</TD>
+												<TD class="TDBGColor1">Customer Name</TD>
 												<TD width="17"></TD>
 												<TD class="TDBGColorValue" style="WIDTH: 342px" width="342"><asp:textbox onkeypress="return kutip_satu()" id="txt_Name" runat="server" MaxLength="20"></asp:textbox></TD>
 											</TR>
 											<TR>
-												<TD class="TDBGColor1">KTP&nbsp;No.</TD>
+												<TD class="TDBGColor1">ID&nbsp;No.</TD>
 												<TD></TD>
 												<TD class="TDBGColorValue" style="WIDTH: 342px"><asp:textbox onkeypress="return kutip_satu()" id="txt_IdCard" runat="server" MaxLength="50"></asp:textbox></TD>
 											</TR>
 											<TR>
-												<TD class="TDBGColor1">Tanggal Lahir</TD>
+												<TD class="TDBGColor1">Birth Date</TD>
 												<TD></TD>
 												<TD class="TDBGColorValue" style="WIDTH: 342px"><asp:textbox onkeypress="return digitsonly()" id="Textbox2" runat="server" MaxLength="2" Columns="3"></asp:textbox><asp:dropdownlist id="DDL_CU_DOB_MM" runat="server"></asp:dropdownlist><asp:textbox onkeypress="return digitsonly()" id="Textbox1" runat="server" MaxLength="4" Columns="3"></asp:textbox></TD>
 											</TR>
 											<TR>
-												<TD class="TDBGColor1">NPWP</TD>
+												<TD class="TDBGColor1">NPWP No</TD>
 												<TD></TD>
 												<TD class="TDBGColorValue" style="WIDTH: 342px"><asp:textbox onkeypress="return kutip_satu()" id="txt_NPWP" runat="server" MaxLength="25"></asp:textbox></TD>
 											</TR>
@@ -66,13 +70,13 @@
 											</TR>
 										</TABLE>
 										<asp:button id="btn_Find" runat="server" CssClass="button1" 
-                                            Text="Cari Eksisting" Width="200px" onclick="btn_Find_Click"></asp:button>&nbsp;
+                                            Text="Search Existing Customer" Width="250px" onclick="btn_Find_Click"></asp:button>&nbsp;
 										<%if (Request.QueryString["tc"] != "" && Request.QueryString["tc"] != null&& Request.QueryString["tc"] != "1.0") {%>
-										<asp:button id="BTN_NEW" runat="server" CssClass="button1" Text="Nasabah Baru" 
-                                            Width="200px" onclick="BTN_NEW_Click"></asp:button>
+										<asp:button id="BTN_NEW" runat="server" CssClass="button1" Text="New Customer" 
+                                            Width="250px" onclick="BTN_NEW_Click"></asp:button>
 										<% } else { %>
 										<asp:button id="BTN_NEW_PREENTRY" runat="server" CssClass="button1" 
-                                            Text="Nasabah Baru" Width="200px" onclick="BTN_NEW_PREENTRY_Click"></asp:button>
+                                            Text="New Customer" Width="250px" onclick="BTN_NEW_PREENTRY_Click"></asp:button>
 										<% } %>
 									</TD>
 								</TR>
@@ -92,7 +96,7 @@
 										<HeaderStyle CssClass="tdSmallHeader"></HeaderStyle>
 										<ItemStyle HorizontalAlign="Center" Width="200px"></ItemStyle>
 									</asp:BoundColumn>
-									<asp:BoundColumn DataField="CUST_NAME" HeaderText="Nama Pemohon">
+									<asp:BoundColumn DataField="CUST_NAME" HeaderText="Customer Name">
 										<HeaderStyle CssClass="tdSmallHeader"></HeaderStyle>
 									</asp:BoundColumn>
 									<asp:BoundColumn DataField="CU_NPWP" HeaderText="NPWP">
@@ -118,7 +122,7 @@
 							<%if (Request.QueryString["tc"] != "" && Request.QueryString["tc"] != null) {%>
 							<TABLE id="Table5" cellSpacing="1" cellPadding="1" width="100%" border="0">
 								<TR>
-									<TD class="tdheader1">Aplikasi Berjalan</TD>
+									<TD class="tdheader1">Pending Application</TD>
 								</TR>
 								<TR>
 									<TD><ASP:DATAGRID id="DatGrd_PendingApp" runat="server" Width="100%" CellPadding="1" AutoGenerateColumns="False"
@@ -131,7 +135,7 @@
 													<HeaderStyle CssClass="tdSmallHeader"></HeaderStyle>
 													<ItemStyle HorizontalAlign="Center"></ItemStyle>
 												</asp:BoundColumn>
-												<asp:BoundColumn DataField="CUST_NAME" HeaderText="Nama Pemohon">
+												<asp:BoundColumn DataField="CUST_NAME" HeaderText="Customer Name">
 													<HeaderStyle CssClass="tdSmallHeader"></HeaderStyle>
 												</asp:BoundColumn>
 												<asp:BoundColumn DataField="CU_NPWP" HeaderText="NPWP">
@@ -142,7 +146,7 @@
 													<HeaderStyle CssClass="tdSmallHeader"></HeaderStyle>
 													<ItemStyle HorizontalAlign="Right"></ItemStyle>
 												</asp:BoundColumn>
-												<asp:BoundColumn DataField="PRE_APPENTRYDATE" HeaderText="Tanggal Aplikasi" DataFormatString="{0:dd-MMM-yyyy}">
+												<asp:BoundColumn DataField="PRE_APPENTRYDATE" HeaderText="Application Date" DataFormatString="{0:dd-MMM-yyyy}">
 													<HeaderStyle CssClass="tdSmallHeader"></HeaderStyle>
 													<ItemStyle HorizontalAlign="Center"></ItemStyle>
 												</asp:BoundColumn>

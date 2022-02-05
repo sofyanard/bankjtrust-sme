@@ -1,5 +1,5 @@
 <%@ Register TagPrefix="uc1" TagName="DocUpload" Src="../CommonForm/DocumentUpload.ascx" %>
-<%@ Page language="c#" Codebehind="GeneralInfo.aspx.cs" AutoEventWireup="True" Inherits="SME.InitialDataEntry.GeneralInfo" enableViewState="True" %>
+<%@ Page language="c#" Codebehind="GeneralInfo.aspx.cs" AutoEventWireup="True" Inherits="SME.InitialDataEntry.GeneralInfo" enableViewState="True" enableEventValidation="False" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -348,7 +348,7 @@
 					</TR>
 					-->
 						<TR>
-							<TD class="tdHeader1" colSpan="2">Informasi Umum</TD>
+							<TD class="tdHeader1" colSpan="2">General Information</TD>
 						</TR>
 						<TR>
 							<TD class="td" vAlign="top" width="50%">
@@ -359,7 +359,7 @@
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:textbox id="TXT_AREAID" runat="server" Width="100%" ReadOnly="True" CssClass="mandatory"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 129px">KC/KCP</TD>
+										<TD class="TDBGColor1" style="WIDTH: 129px">Branch</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_BRANCH_CODE" runat="server" Width="100%" ReadOnly="True" CssClass="mandatory"></asp:textbox></TD>
 									</TR>
@@ -409,7 +409,7 @@
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_AP_BOOKINGBRANCH" runat="server" CssClass="mandatory"></asp:dropdownlist></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Cabang Admin</TD>
+										<TD class="TDBGColor1">Admin Branch</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_AP_CCOBRANCH" runat="server" CssClass="mandatory"></asp:dropdownlist></TD>
 									</TR>
@@ -418,24 +418,24 @@
 							<TD class="td" vAlign="top">
 								<TABLE id="Table3" cellSpacing="0" cellPadding="0" width="100%">
 									<TR>
-										<TD class="TDBGColor1" width="150">Tanggal Aplikasi</TD>
+										<TD class="TDBGColor1" width="150">Application Date</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return numbersonly()" id="TXT_AP_SIGNDATE_DAY" runat="server" Width="24px"
 												CssClass="mandatory" MaxLength="2" Columns="4"></asp:textbox><asp:dropdownlist id="DDL_AP_SIGNDATE_MONTH" runat="server" CssClass="mandatory"></asp:dropdownlist><asp:textbox onkeypress="return numbersonly()" id="TXT_AP_SIGNDATE_YEAR" runat="server" Width="36px"
 												CssClass="mandatory" MaxLength="4" Columns="4"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" width="150">Tanggal Penerusan</TD>
+										<TD class="TDBGColor1" width="150">Process Date</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_AP_RECVDATE" runat="server" ReadOnly="True" BorderStyle="None"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" width="150">Segmen</TD>
+										<TD class="TDBGColor1" width="150">Segment</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_AP_BUSINESSUNIT" runat="server" CssClass="mandatory" AutoPostBack="True" onselectedindexchanged="DDL_AP_BUSINESSUNIT_SelectedIndexChanged"></asp:dropdownlist></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" width="150">No. Aplikasi</TD>
+										<TD class="TDBGColor1" width="150">Application No</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_AP_REGNO" runat="server" Width="200px" ReadOnly="True" BorderStyle="None"></asp:textbox></TD>
 									</TR>
@@ -472,20 +472,19 @@
 							<TD class="td" vAlign="top" width="50%">
 								<TABLE id="Table6" cellSpacing="0" cellPadding="0" width="100%">
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 129px; HEIGHT: 17px">No. Surat Nasabah / 
-											Penawaran</TD>
+										<TD class="TDBGColor1" style="WIDTH: 129px; HEIGHT: 17px">Customer / Offering Letter No</TD>
 										<TD style="WIDTH: 15px; HEIGHT: 17px"></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:textbox id="TXT_SURATNSBNO" runat="server" Width="100%" CssClass="mandatory"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" width="150">Tanggal Surat</TD>
+										<TD class="TDBGColor1" width="150">Letter Date</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return numbersonly()" id="TXT_SURATNSBTGL_DAY" runat="server" Width="24px"
 												CssClass="mandatory" MaxLength="2" Columns="4"></asp:textbox><asp:dropdownlist id="DDL_SURATNSBTGL_MONTH" runat="server" CssClass="mandatory"></asp:dropdownlist><asp:textbox onkeypress="return numbersonly()" id="TXT_SURATNSBTGL_YEAR" runat="server" Width="36px"
 												CssClass="mandatory" MaxLength="4" Columns="4"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" width="150">Tanggal Terima</TD>
+										<TD class="TDBGColor1" width="150">Letter Received Date</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return numbersonly()" id="TXT_SURATNSBTGLTRM_DAY" runat="server" Width="24px"
 												CssClass="mandatory" MaxLength="2" Columns="4"></asp:textbox><asp:dropdownlist id="DDL_SURATNSBTGLTRM_MONTH" runat="server" CssClass="mandatory"></asp:dropdownlist><asp:textbox onkeypress="return numbersonly()" id="TXT_SURATNSBTGLTRM_YEAR" runat="server" Width="36px"
@@ -502,18 +501,18 @@
 							</TD>
 						</TR>
 						<TR>
-							<TD class="tdHeader1" vAlign="top" width="50%" colSpan="2">Info Nasabah
+							<TD class="tdHeader1" vAlign="top" width="50%" colSpan="2">Customer Information
 								<asp:textbox id="TXT_AUDITDESC_PROG" runat="server" Visible="False">Sub-Segment/Program pilih - </asp:textbox><asp:textbox id="TXT_AUDITDESC_BICHECK" runat="server" Visible="False">BI Checking by - </asp:textbox></TD>
 						</TR>
 						<TR>
 							<TD vAlign="top" width="50%" colSpan="2">
 								<TABLE id="Table10" cellSpacing="1" cellPadding="1" width="80%" border="0">
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 228px">Suku Bangsa Papua</TD>
+										<TD class="TDBGColor1" style="WIDTH: 228px">Existing Customer</TD>
 										<TD></TD>
 										<TD><asp:radiobuttonlist id="RDO_CU_PERNAHJDNASABAHBM" runat="server" Width="150px" RepeatDirection="Horizontal">
-												<asp:ListItem Value="1">Ya</asp:ListItem>
-												<asp:ListItem Value="0" Selected="True">Tidak</asp:ListItem>
+												<asp:ListItem Value="1">Yes</asp:ListItem>
+												<asp:ListItem Value="0" Selected="True">No</asp:ListItem>
 											</asp:radiobuttonlist></TD>
 									</TR>
 								</TABLE>
@@ -532,7 +531,7 @@
 							<TD class="td" vAlign="top" width="50%">
 								<TABLE id="Table20" cellSpacing="0" cellPadding="0" width="100%">
                                     <TR>
-										<TD colspan="3"><b>Data Pemohon</b></TD>
+										<TD colspan="3"><b>Applicant Data</b></TD>
 									</TR>
 									<TR>
 										<TD class="TDBGColor1" style="WIDTH: 164px" width="164">CIF No.</TD>
@@ -540,13 +539,13 @@
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_CIF_P" runat="server" Width="200px" BorderStyle="None"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px" width="164">Gelar Sebelum Nama</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px" width="164">Title Before Name</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_TITLEBEFORENAME" runat="server" Width="200px"
 												MaxLength="15"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Nama Pemohon</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Customer Name</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue">
 											<asp:textbox id="TXT_CU_FIRSTNAME" runat="server" Width="300px" CssClass="mandatory2" MaxLength="50"></asp:textbox><BR>
@@ -555,33 +554,33 @@
 										</TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Gelar Setelah Nama</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Title After Name</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_LASTNAME" runat="server" Width="300px" MaxLength="50"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Nama Alias</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Nickname</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_ALIASNAME" runat="server" Width="300px" MaxLength="50"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Alamat Rumah</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Home Address</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:textbox id="TXT_CU_ADDR1" runat="server" Width="300px" CssClass="mandatory2" MaxLength="100"></asp:textbox><BR>
 											<asp:textbox id="TXT_CU_ADDR2" runat="server" Width="300px" MaxLength="100"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Kelurahan / Kecamatan</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">District</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_ADDR3" runat="server" Width="300px" MaxLength="100"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Kota</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">City</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:textbox id="TXT_CU_CITY" runat="server" Width="175px" ReadOnly="True" CssClass="mandatory2"></asp:textbox><asp:textbox id="LBL_CU_CITY" runat="server" style="display:none"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Kode Pos</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Zip Code</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px">
                                             <asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_ZIPCODE" runat="server" CssClass="mandatory2" MaxLength="6" Columns="6"></asp:textbox>
@@ -590,12 +589,12 @@
 										</TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Kepemilikan Rumah</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Home Status</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:dropdownlist id="DDL_CU_HOMESTA" runat="server"></asp:dropdownlist></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">&nbsp;Mulai Menetap</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">&nbsp;Stay Since</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px">
                                             <asp:textbox id="TXT_CU_MULAIMENETAPMM" runat="server" MaxLength="2" 
@@ -604,48 +603,48 @@
                                                 Columns="4"></asp:textbox>&nbsp;(YYYY)</TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">No. Telepon / HP</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Phone No. / Mobile</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:textbox id="TXT_CU_PHNAREA" runat="server" CssClass="mandatory2" MaxLength="5" Columns="4"></asp:textbox><asp:textbox id="TXT_CU_PHNNUM" runat="server" Width="100px" CssClass="mandatory2" MaxLength="15"
 												Columns="10"></asp:textbox>&nbsp;Ext.
 											<asp:textbox id="TXT_CU_PHNEXT" runat="server" MaxLength="5" Columns="3"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">No. Fax / No. Telepon</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Fax No. / Phone No.</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:textbox id="TXT_CU_FAXAREA" runat="server" MaxLength="5" Columns="4"></asp:textbox><asp:textbox id="TXT_CU_FAXNUM" runat="server" Width="100px" MaxLength="15" Columns="10"></asp:textbox>&nbsp;Ext.
 											<asp:textbox id="TXT_CU_FAXEXT" runat="server" MaxLength="5" Columns="3"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Tempat Lahir</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Birth Place</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:textbox id="TXT_CU_POB" runat="server" Width="300px" CssClass="mandatory2" MaxLength="50"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Tanggal Lahir</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Birth Date</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_DOB_DAY" runat="server" Width="24px"
 												CssClass="mandatory2" MaxLength="2" Columns="4"></asp:textbox><asp:dropdownlist id="DDL_CU_DOB_MONTH" runat="server" CssClass="mandatory2"></asp:dropdownlist><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_DOB_YEAR" runat="server" Width="36px"
 												CssClass="mandatory2" MaxLength="4" Columns="4"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Status Perkawinan</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Marital Status</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px">
                                             <asp:dropdownlist id="DDL_CU_MARITAL" runat="server" CssClass="mandatory2"></asp:dropdownlist></TD>
 									</TR>
                                     <TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Jenis Kelamin</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Gender</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:dropdownlist id="DDL_CU_SEX" runat="server" CssClass="mandatory2"></asp:dropdownlist></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Kewarganegaraan</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Nationality</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:dropdownlist id="DDL_CU_CITIZENSHIP" runat="server" CssClass="mandatory2"></asp:dropdownlist></TD>
 									</TR>
                                     <TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Jumlah Anak</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">Number of Children</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue" style="HEIGHT: 17px"><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_CHILDREN" runat="server" MaxLength="2"
 												Columns="3"></asp:textbox></TD>
@@ -657,13 +656,13 @@
 												Columns="40"></asp:textbox></TD>
 									</TR>
                                     <TR>
-										<TD colspan="3"><b>Data Pasangan</b></TD>
+										<TD colspan="3"><b>Spouse Data</b></TD>
 									</TR>
 									<TR>
 										<TD colSpan="3">
 											<TABLE id="Table11" cellSpacing="1" cellPadding="1" width="100%" border="0">
 												<TR>
-													<TD class="TDBGColor1" style="WIDTH: 161px">Nama Pasangan</TD>
+													<TD class="TDBGColor1" style="WIDTH: 161px">Spouse Name</TD>
 													<TD style="WIDTH: 11px"></TD>
 													<TD><asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_SPOUSE_FNAME" runat="server" MaxLength="50"
 															Columns="40"></asp:textbox><BR>
@@ -673,12 +672,12 @@
 															Columns="40"></asp:textbox></TD>
 												</TR>
 												<TR>
-													<TD class="TDBGColor1" style="WIDTH: 161px">No KTP Pasangan</TD>
+													<TD class="TDBGColor1" style="WIDTH: 161px">Spouse ID Card No</TD>
 													<TD style="WIDTH: 11px"></TD>
 													<TD><asp:textbox id="TXT_CU_SPOUSE_IDCARDNUM" runat="server" MaxLength="50" Columns="40"></asp:textbox></TD>
 												</TR>
 												<TR>
-													<TD class="TDBGColor1" style="WIDTH: 161px">Alamat KTP Pasangan</TD>
+													<TD class="TDBGColor1" style="WIDTH: 161px">Spouse Address</TD>
 													<TD style="WIDTH: 11px"></TD>
 													<TD><asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_SPOUSE_KTPADDR1" runat="server" MaxLength="100"
 															Columns="40"></asp:textbox><BR>
@@ -688,7 +687,7 @@
 															Columns="40"></asp:textbox></TD>
 												</TR>
 												<TR>
-													<TD class="TDBGColor1" style="WIDTH: 161px">Tanggal Terbit KTP Pasangan</TD>
+													<TD class="TDBGColor1" style="WIDTH: 161px">Spouse ID Card Issued Date</TD>
 													<TD style="WIDTH: 11px"></TD>
 													<TD><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_SPOUSE_KTPISSUEDATE_DAY" runat="server"
 															Width="24px" MaxLength="2" Columns="4"></asp:textbox><asp:dropdownlist id="DDL_CU_SPOUSE_KTPISSUEDATE_MONTH" runat="server"></asp:dropdownlist><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_SPOUSE_KTPISSUEDATE_YEAR" runat="server"
@@ -709,39 +708,39 @@
 							<TD class="td" vAlign="top" width="50%">
 								<TABLE id="Table2" cellSpacing="0" cellPadding="0" width="100%" runat="server">
                                     <TR>
-										<TD colspan="3"><b>Data KTP</b></TD>
+										<TD colspan="3"><b>ID Card Data</b></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">No. KTP</TD>
+										<TD class="TDBGColor1">ID Card No</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_IDCARDNUM" runat="server" Width="300px" CssClass="mandatory2" MaxLength="50"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Tanggal Berakhir KTP</TD>
+										<TD class="TDBGColor1">ID Card Expired Date</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_IDCARDEXP_DAY" runat="server" Width="24px"
 												CssClass="mandatory2" MaxLength="2" Columns="4"></asp:textbox><asp:dropdownlist id="DDL_CU_IDCARDEXP_MONTH" runat="server" CssClass="mandatory2"></asp:dropdownlist><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_IDCARDEXP_YEAR" runat="server" Width="36px"
 												CssClass="mandatory2" MaxLength="4" Columns="4"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Alamat KTP</TD>
+										<TD class="TDBGColor1">ID Card Address</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_KTPADDR1" runat="server" Width="300px" CssClass="mandatory2" MaxLength="100"></asp:textbox>
                                             <asp:checkbox id="CHB_CU_KTPADDR" Text="Sama dengan Alamat Rumah" Runat="server"></asp:checkbox><BR>
 											<asp:textbox id="TXT_CU_KTPADDR2" runat="server" Width="300px" MaxLength="100"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Kecamatan</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">District</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_KTPADDR3" runat="server" Width="300px" MaxLength="100"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Kota</TD>
+										<TD class="TDBGColor1">City</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_KTPCITY" runat="server" Width="175px" ReadOnly="True" CssClass="mandatory2"></asp:textbox><asp:textbox id="LBL_CU_KTPCITY" runat="server" style="display:none"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Kode Pos</TD>
+										<TD class="TDBGColor1">Zip Code</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue">
                                             <asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_KTPZIPCODE" runat="server" CssClass="mandatory2" MaxLength="6" Columns="6"></asp:textbox>
@@ -750,7 +749,7 @@
 										</TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Jenis Alamat</TD>
+										<TD class="TDBGColor1">Address Type</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_JNSALAMAT_P" runat="server"></asp:dropdownlist><asp:dropdownlist id="DDL_CU_JNSNASABAH_P" runat="server" CssClass="mandatory" Visible="False"></asp:dropdownlist></TD>
 									</TR>
@@ -760,22 +759,22 @@
 										<TD></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Pendidikan Terakhir</TD>
+										<TD class="TDBGColor1">Education</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_CU_EDUCATION" runat="server" CssClass="mandatory2"></asp:dropdownlist></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Jabatan</TD>
+										<TD class="TDBGColor1">Job Position</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_CU_JOBTITLE" runat="server"></asp:dropdownlist></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Bidang Usaha</TD>
+										<TD class="TDBGColor1">Business Sector</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_CU_BUSSTYPE" runat="server"></asp:dropdownlist></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Berdiri Sejak</TD>
+										<TD class="TDBGColor1">Establish Date</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_ESTABLISHDD" runat="server" MaxLength="2" Columns="2"></asp:textbox><asp:dropdownlist id="DDL_CU_ESTABLISHMM" runat="server"></asp:dropdownlist><asp:textbox id="TXT_CU_ESTABLISHYY" runat="server" MaxLength="4" Columns="4"></asp:textbox></TD>
 									</TR>
@@ -785,19 +784,19 @@
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_NPWP" runat="server" Width="200px" MaxLength="25"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Pendapatan Bersih/Bulan</TD>
+										<TD class="TDBGColor1">Gross Income per Month</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return digitsonly()" id="TXT_CU_NETINCOMEMM" runat="server" Width="300px"
 												MaxLength="15">0</asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Jumlah Karyawan</TD>
+										<TD class="TDBGColor1">Number of Employees</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_EMPLOYEE" runat="server"
 												MaxLength="4" Columns="5"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1">Nama Ibu Kandung</TD>
+										<TD class="TDBGColor1">Mother Name</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_MOTHER" runat="server" 
                                                 Width="300px" CssClass="mandatory2" MaxLength="25"></asp:textbox></TD>
@@ -848,31 +847,31 @@
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_CIF_C" runat="server" Width="200px"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 166px">Nama Perusahaan</TD>
+										<TD class="TDBGColor1" style="WIDTH: 166px">Company Name</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_CU_COMPTYPE" runat="server" CssClass="mandatory"></asp:dropdownlist><asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_COMPNAME" runat="server" Width="200px"
 												CssClass="mandatory" MaxLength="50"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 166px">Jenis Badan Usaha</TD>
+										<TD class="TDBGColor1" style="WIDTH: 166px">Company Type</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_CU_JNSNASABAH" runat="server" CssClass="mandatory"></asp:dropdownlist></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 166px">Berdiri Sejak</TD>
+										<TD class="TDBGColor1" style="WIDTH: 166px">Establish Date</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_COMPESTABLISHDD" runat="server" CssClass="mandatory"
 												MaxLength="2" Columns="2"></asp:textbox><asp:dropdownlist id="DDL_CU_COMPESTABLISHMM" runat="server" CssClass="mandatory"></asp:dropdownlist><asp:textbox onkeypress="return numbersonly()" id="TXT_CU_COMPESTABLISHYY" runat="server" CssClass="mandatory"
 												MaxLength="4" Columns="4"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 166px">Tempat Berdiri Perusahaan</TD>
+										<TD class="TDBGColor1" style="WIDTH: 166px">Establish Place</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_COMPPOB" runat="server" Width="200px"
 												CssClass="mandatory" MaxLength="50"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 166px">Alamat Perusahaan</TD>
+										<TD class="TDBGColor1" style="WIDTH: 166px">Company Address</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_COMPADDR1" runat="server" Width="300px"
 												CssClass="mandatory" MaxLength="100"></asp:textbox><BR>
@@ -880,18 +879,18 @@
 												MaxLength="100"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 164px">Kelurahan / Kecamatan</TD>
+										<TD class="TDBGColor1" style="WIDTH: 164px">District</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_COMPADDR3" runat="server" Width="300px"
 												MaxLength="100"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 166px">Kota</TD>
+										<TD class="TDBGColor1" style="WIDTH: 166px">City</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:textbox id="TXT_CU_COMPCITY" runat="server" Width="175px" ReadOnly="True" CssClass="mandatory"></asp:textbox><asp:textbox id="LBL_CU_COMPCITY" runat="server" style="display:none"></asp:textbox></TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 166px">Kode Pos</TD>
+										<TD class="TDBGColor1" style="WIDTH: 166px">Zip Code</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue">
                                             <asp:textbox onkeypress="return kutip_satu()" id="TXT_CU_COMPZIPCODE" runat="server" CssClass="mandatory" MaxLength="6" Columns="6"></asp:textbox>
@@ -900,7 +899,7 @@
 										</TD>
 									</TR>
 									<TR>
-										<TD class="TDBGColor1" style="WIDTH: 166px">Jenis Alamat</TD>
+										<TD class="TDBGColor1" style="WIDTH: 166px">Address Type</TD>
 										<TD></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_JNSALAMAT_C" runat="server"></asp:dropdownlist></TD>
 									</TR>
@@ -943,7 +942,7 @@
 							<TD class="td" vAlign="top" width="50%">
 								<TABLE id="Table5" cellSpacing="0" cellPadding="0" width="100%">
 									<TR>
-										<TD class="TDBGColor1" width="129">Bidang Usaha</TD>
+										<TD class="TDBGColor1" width="129">Business Type</TD>
 										<TD style="WIDTH: 15px"></TD>
 										<TD class="TDBGColorValue"><asp:dropdownlist id="DDL_CU_COMPBUSSTYPE" runat="server" CssClass="mandatory"></asp:dropdownlist></TD>
 									</TR>
