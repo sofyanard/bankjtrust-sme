@@ -562,6 +562,13 @@ namespace SME.InitialDataEntry
                 {
                     conn.QueryString = "select screenlink from apptypelink where apptypeid='" + DDL_APPTYPE.SelectedValue + "' and productid='" + DDL_PRODUCTID.SelectedValue + "' and fungsiid='IDE' and [default]='2'";
                     conn.ExecuteQuery();
+
+                    if (conn.GetRowCount() == 0)
+                    {
+                        conn.QueryString = "select top 1 screenlink from apptypelink where apptypeid='" + DDL_APPTYPE.SelectedValue + "' and fungsiid='IDE' and [default]='2'";
+                        conn.ExecuteQuery();
+                    }
+
                     link = conn.GetFieldValue(0, 0) + "?app=" + DDL_APPTYPE.SelectedValue + "&prod=" + DDL_PRODUCTID.SelectedValue;
                 }
 
