@@ -12709,7 +12709,9 @@
     <Content Include="include\child.html" />
     <Content Include="include\ConfirmBox.html" />
     <Content Include="include\exportpost.html" />
+    <Content Include="include\Labarugi-Small-javascript.html" />
     <Content Include="include\Neraca-IS-javascript.html" />
+    <Content Include="include\Neraca-Small-javascript.html" />
     <Content Include="include\onepost.html" />
     <Content Include="include\popup.html" />
     <Content Include="include\test.html" />
