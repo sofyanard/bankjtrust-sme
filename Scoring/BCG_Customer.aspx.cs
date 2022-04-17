@@ -1606,7 +1606,8 @@ namespace SME.Scoring
 			}
 			catch (Exception ex)
 			{
-				GlobalTools.popMessage(this, "Error financial rating buffer!");
+				// BJI2022: sementara ditutup
+				// GlobalTools.popMessage(this, "Error financial rating buffer!");
 				Response.Write("<!--" + ex.Message + "-->");
 				return;
 			}
@@ -1683,7 +1684,8 @@ namespace SME.Scoring
 			}
 			catch (Exception ex)
 			{
-				GlobalTools.popMessage(this, "Error financial rating buffer!");
+				// BJI2022: sementara ditutup
+				// GlobalTools.popMessage(this, "Error financial rating buffer!");
 				Response.Write("<!--" + ex.Message + "-->");
 				return;
 			}
