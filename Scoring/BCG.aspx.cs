@@ -169,8 +169,9 @@ namespace SME.Scoring
 
 					this.PH_BY.Controls.Add(byFacility);
 				}
-				this.PH_BY.Controls.Add(new LiteralControl("&nbsp;&nbsp;"));
-				this.PH_BY.Controls.Add(byRorac);
+
+				// this.PH_BY.Controls.Add(new LiteralControl("&nbsp;&nbsp;"));
+				// this.PH_BY.Controls.Add(byRorac);
 			}
 			else if(a == "038")
 			{
