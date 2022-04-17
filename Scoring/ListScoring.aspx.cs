@@ -114,9 +114,12 @@ namespace SME.Scoring
 			DTBO.Columns.Add(new DataColumn("SCR_LINK"));			
 			DTBO.Columns.Add(new DataColumn("AP_CA"));
 
-			conn.QueryString = "SELECT ap_regno, cu_ref, name, su_fullname, ap_signdate, ap_ca FROM VW_LISTCUSTOMER_PERSONAL where AP_CURRTRACK='" + this.LBL_TC.Text + "' and ap_ca = '" + Session["UserID"].ToString() + "' ";
-			conn.QueryString += "UNION SELECT ap_regno, cu_ref, cu_compname as name, su_fullname, ap_signdate, ap_ca FROM VW_LISTCUSTOMER_COMPANY where  AP_CURRTRACK='" + this.LBL_TC.Text + "' and ap_ca = '" + Session["UserID"].ToString() + "'";
-			
+			// conn.QueryString = "SELECT ap_regno, cu_ref, name, su_fullname, ap_signdate, ap_ca FROM VW_LISTCUSTOMER_PERSONAL where AP_CURRTRACK='" + this.LBL_TC.Text + "' and ap_ca = '" + Session["UserID"].ToString() + "' ";
+			// conn.QueryString += "UNION SELECT ap_regno, cu_ref, cu_compname as name, su_fullname, ap_signdate, ap_ca FROM VW_LISTCUSTOMER_COMPANY where  AP_CURRTRACK='" + this.LBL_TC.Text + "' and ap_ca = '" + Session["UserID"].ToString() + "'";
+
+			conn.QueryString = "SELECT ap_regno, cu_ref, name, su_fullname, ap_signdate, ap_ca FROM VW_LISTCUSTOMER_PERSONAL where AP_CURRTRACK='" + this.LBL_TC.Text + "' and (ap_ca = '" + Session["UserID"].ToString() + "' or isnull(ap_ca,'') = '') ";
+			conn.QueryString += "UNION SELECT ap_regno, cu_ref, cu_compname as name, su_fullname, ap_signdate, ap_ca FROM VW_LISTCUSTOMER_COMPANY where  AP_CURRTRACK='" + this.LBL_TC.Text + "' and (ap_ca = '" + Session["UserID"].ToString() + "' or isnull(ap_ca,'') = '')";
+
 			try 
 			{
 				conn.ExecuteQuery();
