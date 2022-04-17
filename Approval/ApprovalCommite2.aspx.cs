@@ -321,6 +321,12 @@ namespace SME.Approval
 
 		protected void BTN_UPDATESTATUS_Click(object sender, System.EventArgs e)
 		{
+			if ((DDL_EMAS_BU.SelectedValue.Trim() == "") || (DDL_EMAS_RISK.SelectedValue.Trim() == ""))
+            {
+				GlobalTools.popMessage(this, "Business Unit and Risk Approval cannot be empty!");
+				return;
+			}
+			
 			try
 			{
 				conn.QueryString = "EXEC APPROVALCOMMITEE_UPDATESTATUS '" + 
